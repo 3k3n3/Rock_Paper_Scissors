@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Rock-Paper-Scissors</title>
+</head>
+
+<body>
+    <header class="">
+        <h1>Rock-Paper-Scissors</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="max">
+                <div class="rht">
+                    {% if x %}
+                    {% if x == "Rock" %}
+                    <img src="{% static 'images/rock.gif' %}?{{t}}" alt="">
+                    {% elif x == "Paper" %}
+                    <img src="{% static 'images/paper.gif' %}?{{t}}" alt="">
+                    {% elif x == "Scissors" %}
+                    <img src="{% static 'images/scissors.gif' %}?{{t}}" alt="">
+                    {% endif %}
+                </div>
+
+                <div class="lft">
+                    <!-- ?t returns current time from backend and is appended to image name
+                    It prevents browser caching by loading image as unique object each time page reloads
+                    Browser caching prevent gifs reload & re-animation when page refreshes -->
+                    {% if y == "Rock" %}
+                    <img class="rot" src="{% static 'images/rock.gif' %}?{{t}}" alt="">
+                    {% elif y == "Paper" %}
+                    <img class="rot" src="{% static 'images/paper.gif' %}?{{t}}" alt="">
+                    {% elif y == "Scissors" %}
+                    <img class="rot" src="{% static 'images/scissors.gif' %}?{{t}}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+
+            <table id="status">
+                <thead>
+                    <th>YOU</th>
+                    <th>:</th>
+                    <th>COM</th>
+                </thead>
+                <tr>
+                    <td>{{x}}</td>
+                    <td>{{z}}</td>
+                    <td>{{y}}</td>
+                </tr>
+            </table>
+
+            {% endif %}
+        </section>
+
+        <section>
+            <form action="" method="post" id="game">
+                {% csrf_token %}
+                <input type="radio" name="game" id="r" value="Rock"><label for=r><img class="rot mini"
+                        src="{% static 'images/rock_img.gif' %}" alt=""></label>
+                <input type="radio" name="game" id="p" value="Paper"><label for=p><img class="rot mini"
+                        src="{% static 'images/paper_img.gif' %}" alt=""></label>
+                <input type="radio" name="game" id="s" value="Scissors"><label for=s><img class="rot mini"
+                        src="{% static 'images/scissors_img.gif' %}" alt=""></label>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+
+</html>
