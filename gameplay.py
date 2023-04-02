@@ -1,7 +1,6 @@
 import random
 import time
 
-
 # moves
 R = "Rock"
 P = "Paper"
@@ -10,15 +9,11 @@ S = "Scissors"
 moves = [R, P, S]
 
 def gameplay(x):
-    print("computing...")
-    print(time.time())
-
+    #passed to template and append to image name to prevent browser caching
     time_now = time.time()
-    delay = time.sleep(1.30)
+
     player_move = x
     comp_move = random.choice(moves)
-
-    print(player_move, comp_move)
 
     if player_move == R:
         if comp_move == R:
@@ -44,4 +39,4 @@ def gameplay(x):
         else:
             decision = "You win!"
 
-    return(comp_move, decision, time_now, delay)
+    return(comp_move, decision, time_now)

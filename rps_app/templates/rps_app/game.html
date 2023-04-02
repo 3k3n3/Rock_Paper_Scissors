@@ -43,23 +43,25 @@
                 </div>
             </div>
 
-            <table id="status">
-                <thead>
-                    <th>YOU</th>
-                    <th>:</th>
-                    <th>COM</th>
-                </thead>
-                <tr>
-                    <td>{{x}}</td>
-                    <td>{{z}}</td>
-                    <td>{{y}}</td>
-                </tr>
-            </table>
+            <div class="scoreboard">
+                <table id="status">
+                    <thead>
+                        <th>YOU</th>
+                        <th>:</th>
+                        <th>COM</th>
+                    </thead>
+                    <tr>
+                        <td>{{x}}</td>
+                        <td>{{z}}</td>
+                        <td>{{y}}</td>
+                    </tr>
+                </table>
+            </div>
 
             {% endif %}
         </section>
 
-        <section>
+        <section class="playcons">
             <form action="" method="post" id="game">
                 {% csrf_token %}
                 <input type="radio" name="game" id="r" value="Rock"><label for=r><img class="rot mini"

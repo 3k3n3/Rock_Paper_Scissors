@@ -12,18 +12,19 @@
 }
 
 body {
-    margin: 4px 0 0 0;
     max-height: 100vh;
+    padding: 20px;
 }
 
 header {
-    width: fit-content;
-    padding: 12px 5px 12px 5px;
-    margin: 1px auto 2px auto;
+    text-align: center;
     color: rgba(183, 206, 225, 0.835);
     font-size: 24px;
     font-family: 'Gloria Hallelujah', cursive;
+}
 
+.playcons {
+    padding: 0% 20% 0% 20%;
 }
 
 /* radio icons */
@@ -37,30 +38,26 @@ header {
     transform: scaleX(-1);
 }
 
+.scoreboard {
+    padding: 1%;
+    width: max-content;
+    margin: 0 auto;
+}
+
 #status {
-    /* outline: 1px solid red; */
-    align-items: center;
-    margin: -2% auto 2% auto;
     color: rgba(183, 206, 225, 0.835);
     font-family: 'Over the Rainbow', cursive;
 }
 
 form {
-    /* outline: 1px solid green; */
-    width: 35%;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
-    justify-content: space-between
+    text-align: center;
 }
 
 .max {
-    /* outline: 1px solid red; */
     display: flex;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: max-content;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .rht {
@@ -72,21 +69,46 @@ form {
 }
 
 .max img {
-    /* outline: 1px solid greenyellow; */
     width: 90%;
-    height: 90%;
     background-color: rgba(168, 168, 220, 0.505);
+    border: none;
+    outline: none;
 }
 
 .mini {
     background-color: rgb(9, 9, 69);
-    /* outline: 1px solid red; */
-    width: 150px;
-    height: 150px;
+    width: 30%;
     border-radius: 50%;
 }
 
 .mini:hover {
     transform: scale(1.20, 1.20);
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 5%;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 16px;
+        margin-bottom: 7%;
+    }
+
+    .playcons {
+        margin-top: 10px;
+        padding: 0% 10% 0% 10%;
+    }
+
+    .mini {
+        width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        font-size: 14px;
+    }
 }
