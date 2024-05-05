@@ -1,0 +1,14 @@
+{% extends 'rps_app/_base.html' %}
+{% load static %}
+
+{% block title %}Play{% endblock title %}
+
+{% block content %}
+<section id="status">
+    <a href="{% url 'friend' %}"> Play with friend</a>
+    <br>
+    <a href=""> Play with random user</a>
+    <br>
+    <a href="{% url 'game' %}"> Play vs Computer</a>
+</section>
+{% endblock content %}

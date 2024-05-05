@@ -23,6 +23,12 @@ header {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+
+#scoreRow,
+#scoreHead {
+    display: none;
+}
+
 .playcons {
     padding: 0% 20% 0% 20%;
 }

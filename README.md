@@ -7,4 +7,5 @@ This web application extends the classic Rock-Paper-Scissors game scripted with 
 
 [Images](rps_app\static\images) remain copyright properties of their respective owners.  
 [Rock_Paper_Scissors GIF Image](https://media.giphy.com/media/elJQRdWlFb8gPN1T9K/giphy.gif)  
-GIF edits with [ezgif](https://ezgif.com/)
+GIF edits with [ezgif](https://ezgif.com/)  
+<a target="_blank" href="https://icons8.com/icon/41456/hand-scissors">Hand Scissors</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a>

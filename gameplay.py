@@ -8,8 +8,11 @@ S = "Scissors"
 
 moves = [R, P, S]
 
+scoreboard = {"you": 0, "com": 0}
+
+
 def gameplay(x):
-    #passed to template and append to image name to prevent browser caching
+    # passed to template and append to image name to prevent browser caching
     time_now = time.time()
 
     player_move = x
@@ -20,23 +23,28 @@ def gameplay(x):
             decision = "Draw"
         elif comp_move == P:
             decision = "Com Wins!"
+            scoreboard["com"] += 1
         else:
             decision = "You win!"
+            scoreboard["you"] += 1
 
     elif player_move == P:
         if comp_move == P:
             decision = "Draw"
         elif comp_move == S:
             decision = "Com Wins!"
+            scoreboard["com"] += 1
         else:
             decision = "You win!"
+            scoreboard["you"] += 1
 
     else:
         if comp_move == S:
             decision = "Draw"
         elif comp_move == R:
             decision = "Com Wins!"
+            scoreboard["com"] += 1
         else:
             decision = "You win!"
-
-    return(comp_move, decision, time_now)
+            scoreboard["you"] += 1
+    return (comp_move, decision, time_now, scoreboard)

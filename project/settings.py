@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-wtzah(pofr4=h7exu-axw0xd7_x6de6$(l_e!lhug9-=j=lgio"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     #
-    "rps_app.apps.RpsAppConfig"
+    "rps_app.apps.RpsAppConfig",
 ]
 
 MIDDLEWARE = [
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Africa/Lagos"
 
 USE_I18N = True
 
